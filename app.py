@@ -25,10 +25,18 @@ if 'chat_open' not in st.session_state:
 
 st.markdown("""
 <style>
+    /* Mover la barra lateral a la derecha */
     [data-testid="stSidebar"] {
-        position: fixed;
-        right: 0;
-        left: auto;
+        right: 0 !important;
+        left: auto !important;
+        border-right: none !important;
+        border-left: 1px solid #f0f2f6 !important;
+    }
+
+    /* Ajustar la posición del botón para colapsar la barra lateral si es visible */
+    [data-testid="stSidebarCollapseButton"] {
+        right: 20px !important;
+        left: auto !important;
     }
     
     .main-header {
